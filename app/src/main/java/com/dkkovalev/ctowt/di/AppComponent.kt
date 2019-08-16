@@ -3,7 +3,6 @@ package com.dkkovalev.ctowt.di
 import com.dkkovalev.ctowt.App
 import dagger.Component
 import dagger.android.AndroidInjector
-import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
@@ -11,11 +10,12 @@ import javax.inject.Singleton
     modules = [
         AndroidSupportInjectionModule::class,
         AppModule::class,
-        NetworkModule::class,
-        ViewModelModule::class
+        ActivityBindingModule::class,
+        ViewModelModule::class,
+        NetworkModule::class
     ]
 )
 interface AppComponent : AndroidInjector<App> {
-    @Component.Builder
-    abstract class Builder : AndroidInjector.Builder<App>()
+    @Component.Factory
+    abstract class Factory : AndroidInjector.Factory<App>
 }

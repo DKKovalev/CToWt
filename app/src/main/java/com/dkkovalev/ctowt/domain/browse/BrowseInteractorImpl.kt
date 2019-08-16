@@ -1,3 +1,6 @@
 package com.dkkovalev.ctowt.domain.browse
 
-class BrowseInteractorImpl : BrowseInteractor
+import com.dkkovalev.ctowt.data.repo.browse.BrowseRepo
+import javax.inject.Inject
+
+class BrowseInteractorImpl @Inject constructor(private val repo: BrowseRepo) : BrowseInteractor
