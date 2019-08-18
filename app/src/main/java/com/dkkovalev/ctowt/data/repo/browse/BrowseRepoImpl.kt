@@ -8,6 +8,7 @@ class BrowseRepoImpl @Inject constructor(
     private val twitchApi: TwitchApiService,
     private val mixerApi: MixerApiService
 ) : BrowseRepo {
-    override fun loadBrowseScreen() {
+    override suspend fun loadBrowseScreen() {
+        mixerApi.browseGames()
     }
 }

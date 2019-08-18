@@ -18,15 +18,15 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField("String", "TWITCH_ENDPOINT", "\"https://api.twitch.tv\"")
-            buildConfigField("String", "MIXER_ENDPOINT", "\"https://mixer.com/api/v1\"")
+            buildConfigField("String", "TWITCH_ENDPOINT", "\"https://api.twitch.tv/\"")
+            buildConfigField("String", "MIXER_ENDPOINT", "\"https://mixer.com/api/v1/\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
         release {
-            buildConfigField("String", "TWITCH_ENDPOINT", "\"https://api.twitch.tv\"")
-            buildConfigField("String", "MIXER_ENDPOINT", "\"https://mixer.com/api/v1\"")
+            buildConfigField("String", "TWITCH_ENDPOINT", "\"https://api.twitch.tv/\"")
+            buildConfigField("String", "MIXER_ENDPOINT", "\"https://mixer.com/api/v1/\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

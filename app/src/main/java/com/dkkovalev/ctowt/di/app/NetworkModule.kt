@@ -1,4 +1,4 @@
-package com.dkkovalev.ctowt.di
+package com.dkkovalev.ctowt.di.app
 
 import android.content.Context
 import com.dkkovalev.ctowt.BuildConfig

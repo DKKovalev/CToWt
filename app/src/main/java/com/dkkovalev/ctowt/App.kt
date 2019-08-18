@@ -2,7 +2,7 @@ package com.dkkovalev.ctowt
 
 import android.annotation.SuppressLint
 import android.content.Context
-import com.dkkovalev.ctowt.di.DaggerAppComponent
+import com.dkkovalev.ctowt.di.app.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 
@@ -20,5 +20,5 @@ class App : DaggerApplication() {
     }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
-        DaggerAppComponent.factory().create(this)
+        DaggerAppComponent.builder().create(this)
 }
