@@ -1,5 +1,7 @@
 package com.dkkovalev.ctowt.data.repo.browse
 
+import com.dkkovalev.ctowt.data.mapper.BrowseMapper
+import com.dkkovalev.ctowt.data.mapper.BrowseMapperImpl
 import com.dkkovalev.ctowt.data.network.MixerApiService
 import com.dkkovalev.ctowt.data.network.TwitchApiService
 import com.dkkovalev.ctowt.di.FragmentScoped
@@ -12,6 +14,11 @@ class BrowseRepoModule {
     @Provides
     fun providesBrowseRepo(
         twitchApi: TwitchApiService,
-        mixerApi: MixerApiService
-    ): BrowseRepo = BrowseRepoImpl(twitchApi, mixerApi)
+        mixerApi: MixerApiService,
+        mapper: BrowseMapper
+    ): BrowseRepo = BrowseRepoImpl(twitchApi, mixerApi, mapper)
+
+    @FragmentScoped
+    @Provides
+    fun providesBrowseMapper(): BrowseMapper = BrowseMapperImpl()
 }

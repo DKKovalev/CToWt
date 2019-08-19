@@ -11,6 +11,7 @@ class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
 
         NavHostFragment.findNavController(nav_host_fragment).navigate(R.id.browseFragment)
     }
