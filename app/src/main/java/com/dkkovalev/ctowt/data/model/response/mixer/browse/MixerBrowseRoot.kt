@@ -1,4 +1,4 @@
-package com.dkkovalev.ctowt.data.model.response.mixer
+package com.dkkovalev.ctowt.data.model.response.mixer.browse
 
 import com.dkkovalev.ctowt.data.network.*
 import com.google.gson.annotations.SerializedName

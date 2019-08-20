@@ -1,8 +1,7 @@
 package com.dkkovalev.ctowt.domain.browse
 
-import com.dkkovalev.ctowt.data.model.entity.BrowseModel
-import com.dkkovalev.ctowt.data.model.response.mixer.MixerBrowseRoot
+import com.dkkovalev.ctowt.data.model.entity.BrowseItem
 
 interface BrowseInteractor {
-    suspend fun getCurrentTop(): List<BrowseModel>
+    suspend fun getCurrentTop(): List<BrowseItem>
 }

@@ -1,4 +1,4 @@
-package com.dkkovalev.ctowt.data.model.response.twitch
+package com.dkkovalev.ctowt.data.model.response.twitch.browse
 
 import com.dkkovalev.ctowt.data.network.TWITCH_COVER_URL
 import com.dkkovalev.ctowt.data.network.TWITCH_ID

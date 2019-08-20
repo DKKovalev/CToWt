@@ -6,5 +6,12 @@
 
     <fragment android:id="@+id/browseFragment"
               android:name="com.dkkovalev.ctowt.presentation.screen.browse.BrowseFragment"
-              android:label="BrowseFragment"/>
+              android:label="BrowseFragment">
+        <action android:id="@+id/action_browseFragment_to_streamsFragment" app:destination="@id/streamsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/streamsFragment"
+              android:name="com.dkkovalev.ctowt.presentation.screen.streams.StreamsFragment"
+              android:label="StreamsFragment">
+        <argument android:name="browse_item" app:argType="com.dkkovalev.ctowt.data.model.entity.BrowseItem"/>
+    </fragment>
 </navigation>
